@@ -11,16 +11,17 @@ call plug#begin('~/Users/minhsn22/.local/share/nvim/plugged')
 	Plug 'easymotion/vim-easymotion'
 	Plug 'ryanoasis/vim-devicons'
 	Plug '907th/vim-auto-save'
-	Plug 'ayu-theme/ayu-vim'
+    Plug 'junegunn/seoul256.vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'prettier/vim-prettier', { 'build': 'npm install'}
 	Plug 'rhysd/vim-clang-format'
 call plug#end()
 
-set termguicolors    
-let ayucolor="light"
-colorscheme ayu
 
+colo seoul256-light
+set background=light
+
+set termguicolors    
 set nu
 
 set clipboard=unnamedplus
@@ -165,3 +166,8 @@ nnoremap <C-p> :ClangFormat <CR>
 
 " autosave
 let g:auto_save = 1 
+
+"tab size
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
